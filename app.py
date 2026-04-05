@@ -7,7 +7,7 @@ app = Flask(__name__)
 CORS(app) # Bunu ekledik: Artık React uygulamamız API ile haberleşebilecek!
 #???
 # Format: postgresql://kullanici_adi:sifre@endpoint_adresi:5432/postgres
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:Minseok99.@proje1database.cmdekkcucoay.us-east-1.rds.amazonaws.com:5432/postgres'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:Minseok99@proje1database.cmdekkcucoay.us-east-1.rds.amazonaws.com:5432/postgres'
 
 # Az önce kopyaladığın anahtarı buraya yapıştır (Örn: b'abc123...')
 ENCRYPTION_KEY = b'EDBoFP8acLl0GHSr7excTdMzDOEIrSCneOI91FWExJ4='
