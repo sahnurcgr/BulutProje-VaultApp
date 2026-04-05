@@ -19,7 +19,7 @@ function App() {
   const handleRegister = async () => {
     if(!username || !masterPassword) return alert("Lütfen boş alan bırakmayın!");
     
-    const response = await fetch('http://3.236.112.142:5000/register', {
+    const response = await fetch('http://98.80.146.216:5000/register', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ username: username, password: masterPassword })
@@ -40,7 +40,7 @@ function App() {
 
   const handleAddPassword = async () => {
     if (!siteName || !sitePassword) return alert("Site adı ve şifre zorunludur!");
-    const response = await fetch('http://3.236.112.142:5000/add_password', {
+    const response = await fetch('http://98.80.146.216:5000/add_password', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ user_id: userId, site_name: siteName, site_url: siteUrl, password: sitePassword })
@@ -52,7 +52,7 @@ function App() {
   };
 
   const handleGetPasswords = async () => {
-    const response = await fetch(`http://3.236.112.142:5000/get_passwords/${userId}`);
+    const response = await fetch(`http://98.80.146.216:5000/get_passwords/${userId}`);
     const data = await response.json();
     setPasswords(data.sifreler);
   };
